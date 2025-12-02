@@ -27,3 +27,35 @@ btn.addEventListener('click', () => {
 overlay.addEventListener('click', closeMenu);
 document.querySelectorAll('#mobile-sidebar a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+
+// =======================
+// USER PROFILE DROPDOWN (Desktop Only)
+// =======================
+
+const profileBtn = document.getElementById("profile-button");
+const dropdown = document.getElementById("profile-dropdown");
+
+// Toggle dropdown on desktop only
+profileBtn.addEventListener("click", (event) => {
+    if (window.innerWidth >= 1024) { // lg breakpoint in Tailwind
+        event.stopPropagation(); // Prevent closing immediately
+        dropdown.classList.toggle("hidden");
+    }
+});
+
+// Close dropdown when clicking outside (desktop only)
+document.addEventListener("click", (event) => {
+    if (window.innerWidth >= 1024) {
+        if (!profileBtn.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add("hidden");
+        }
+    }
+});
+
+// Close dropdown with ESC (desktop only)
+document.addEventListener("keydown", (event) => {
+    if (window.innerWidth >= 1024 && event.key === "Escape") {
+        dropdown.classList.add("hidden");
+    }
+});
