@@ -16,164 +16,113 @@
     </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
+    <header class="fixed top-0 left-0 right-0 h-20 md:h-[90px] bg-white shadow-lg z-50 flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-32">
+        <img src="public/img/esprit.png" alt="Logo Esprit" class="h-10 md:h-14" />
+        <a href="#login" class="font-outfit inline-flex items-center justify-center h-9 md:h-10 px-6 md:px-8 bg-[#49abe1] text-white font-semibold text-lg md:text-xl rounded-full hover:bg-[#3a8cc1] transition">
+            Se Connecter
+        </a>
+    </header>
+    <main class="pt-20 md:pt-[90px]">
+        <section class="bg-[#0b22b81a] py-16 md:py-28 lg:py-32 shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20">
 
-<!-- Navbar -->
-<header class="fixed top-0 left-0 right-0 h-20 md:h-[90px] bg-white shadow-lg z-50 flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-32">
-    <img src="public/img/esprit.png" alt="Logo Esprit" class="h-10 md:h-14" />
-    <a href="#login" class="font-outfit inline-flex items-center justify-center h-9 md:h-10 px-6 md:px-8 bg-[#49abe1] text-white font-semibold text-lg md:text-xl rounded-full hover:bg-[#3a8cc1] transition">
-        Se Connecter
-    </a>
-</header>
-
-<main class="pt-20 md:pt-[90px]">
-
-    <!-- Hero + Login Form -->
-    <section class="bg-[#0b22b81a] py-16 md:py-28 lg:py-32 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20">
-
-            <div class="max-w-xl">
-                <h1 class="font-outfit text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight">
-                    Bienvenue sur notre<br>portail de paiement
-                </h1>
-                <p class="text-xl sm:text-2xl md:text-3xl leading-relaxed mb-8 md:mb-12">
-                    Découvrez une plateforme moderne et sécurisée pour gérer tous vos paiements où que vous soyez.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-6 md:gap-8">
-                    <a href="#explore" class="font-outfit inline-flex items-center justify-center h-12 px-10 bg-[#49abe1] text-black font-medium text-xl rounded-full hover:bg-[#5bb8ed] transition">
-                        Explore
-                    </a>
-                    <a href="#view" class="font-outfit inline-flex items-center justify-center h-12 px-10 bg-[#49abe114] text-black font-medium text-xl rounded-full hover:bg-[#49abe130] transition">
-                        View
-                    </a>
-                </div>
-            </div>
-
-            <aside id="login" class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 w-full max-w-md mt-8 lg:mt-0">
-                <h2 class="font-outfit text-2xl md:text-3xl font-bold text-[#49abe1] text-center mb-6 md:mb-8">Se Connecter</h2>
-                <form action="/login" method="post" class="space-y-6 md:space-y-8">
-                    <div>
-                        <label for="identifiant" class="block text-lg mb-2">Identifiant *</label>
-                        <input type="text" id="identifiant" name="identifiant" required placeholder="Entrer votre Identifiant"
-                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#49abe1]" />
+                <div class="max-w-xl">
+                    <h1 class="font-outfit text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight">
+                        Bienvenue sur notre<br>portail de paiement
+                    </h1>
+                    <p class="text-xl sm:text-2xl md:text-3xl leading-relaxed mb-8 md:mb-12">
+                        Découvrez une plateforme moderne et sécurisée pour gérer tous vos paiements où que vous soyez.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 md:gap-8">
+                        <a href="#explore" class="font-outfit inline-flex items-center justify-center h-12 px-10 bg-[#49abe1] text-black font-medium text-xl rounded-full hover:bg-[#5bb8ed] transition">
+                            Explore
+                        </a>
+                        <a href="#view" class="font-outfit inline-flex items-center justify-center h-12 px-10 bg-[#49abe114] text-black font-medium text-xl rounded-full hover:bg-[#49abe130] transition">
+                            View
+                        </a>
                     </div>
-                    <div>
-                        <label for="password" class="block text-lg mb-2">Mot de Passe *</label>
-                        <input type="password" id="password" name="password" required placeholder="Entrer votre mot de passe"
-                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#49abe1]" />
+                </div>
+
+                <aside id="login" class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 w-full max-w-md mt-8 lg:mt-0">
+                    <h2 class="font-outfit text-2xl md:text-3xl font-bold text-[#49abe1] text-center mb-6 md:mb-8">Se Connecter</h2>
+                    <form action="/login" method="post" class="space-y-6 md:space-y-8">
+                        <div>
+                            <label for="identifiant" class="block text-lg mb-2">Identifiant *</label>
+                            <input type="text" id="identifiant" name="identifiant" required placeholder="Entrer votre Identifiant"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#49abe1]" />
+                        </div>
+                        <div>
+                            <label for="password" class="block text-lg mb-2">Mot de Passe *</label>
+                            <input type="password" id="password" name="password" required placeholder="Entrer votre mot de passe"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#49abe1]" />
+                        </div>
+                        <div class="flex justify-center">
+                            <button
+                                    type="button"
+                                    onclick="window.location.href='src/pages/acceuil.html';"
+                                    class="font-outfit px-10 md:px-12 py-3 bg-[#49abe1] text-white font-medium text-lg md:text-xl rounded-full hover:bg-[#3a8cc1] transition"
+                            >
+                                Se Connecter
+                            </button>
+                        </div>
+                    </form>
+                </aside>
+            </div>
+        </section>
+        <section id="explore" class="py-20 md:py-24 bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                <h2 class="font-outfit text-3xl sm:text-4xl font-medium text-[#6c74b1] text-center mb-12 md:mb-16">Les Fonctionnalités Clés</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 justify-items-center">
+
+                    <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
+                        <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">credit_card</span>
+                        <p class="text-lg md:text-xl leading-relaxed">Régler vos frais rapidement via carte bancaire ou autres moyens électroniques.</p>
                     </div>
-                    <div class="flex justify-center">
-                        <button
-                                type="button"
-                                onclick="window.location.href='src/pages/acceuil.html';"
-                                class="font-outfit px-10 md:px-12 py-3 bg-[#49abe1] text-white font-medium text-lg md:text-xl rounded-full hover:bg-[#3a8cc1] transition"
-                        >
-                            Se Connecter
-                        </button>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
+                        <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">history</span>
+                        <p class="text-lg md:text-xl leading-relaxed">Consultez facilement toutes vos opérations passées.</p>
                     </div>
-                </form>
-            </aside>
-        </div>
-    </section>
 
-    <!-- Features -->
-    <section id="explore" class="py-20 md:py-24 bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 class="font-outfit text-3xl sm:text-4xl font-medium text-[#6c74b1] text-center mb-12 md:mb-16">Les Fonctionnalités Clés</h2>
+                    <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
+                        <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">download</span>
+                        <p class="text-lg md:text-xl leading-relaxed">Téléchargez vos justificatifs de paiement en un clic.</p>
+                    </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 justify-items-center">
+                    <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
+                        <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">notifications_active</span>
+                        <p class="text-lg md:text-xl leading-relaxed">Recevez une confirmation instantanée par e-mail ou SMS.</p>
+                    </div>
 
-                <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
-                    <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">credit_card</span>
-                    <p class="text-lg md:text-xl leading-relaxed">Régler vos frais rapidement via carte bancaire ou autres moyens électroniques.</p>
+                    <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
+                        <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">person</span>
+                        <p class="text-lg md:text-xl leading-relaxed">Gérez vos informations et vos modes de paiement.</p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
+                        <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">schedule</span>
+                        <p class="text-lg md:text-xl leading-relaxed">Vérifiez le statut de vos paiements à tout moment.</p>
+                    </div>
+
                 </div>
-
-                <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
-                    <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">history</span>
-                    <p class="text-lg md:text-xl leading-relaxed">Consultez facilement toutes vos opérations passées.</p>
+            </div>
+        </section>
+        <section id="view" class="bg-[#d9dddf30] py-32 md:py-48 shadow-lg">
+            <h2 class="font-outfit text-3xl sm:text-4xl font-semibold text-[#6c74b1] text-center mb-12 md:mb-16">About Us</h2>
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20">
+                <div class="max-w-3xl">
+                    <p class="text-xl sm:text-2xl md:text-3xl leading-relaxed text-center lg:text-left">
+                        Nous sommes une plateforme de paiement en ligne dédiée à la simplicité et à la sécurité.<br><br>
+                        Notre objectif est de rendre vos opérations financières fluides et toujours accessibles - 24h/24 et 7j/7.<br><br>
+                        Nous nous efforçons d'offrir une expérience rapide, sécurisée et conviviale.
+                    </p>
                 </div>
-
-                <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
-                    <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">download</span>
-                    <p class="text-lg md:text-xl leading-relaxed">Téléchargez vos justificatifs de paiement en un clic.</p>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
-                    <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">notifications_active</span>
-                    <p class="text-lg md:text-xl leading-relaxed">Recevez une confirmation instantanée par e-mail ou SMS.</p>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
-                    <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">person</span>
-                    <p class="text-lg md:text-xl leading-relaxed">Gérez vos informations et vos modes de paiement.</p>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-lg p-6 md:p-8 w-full max-w-sm flex flex-col items-center text-center">
-                    <span class="material-icons text-[#49abe1] text-6xl md:text-7xl mb-4 md:mb-6">schedule</span>
-                    <p class="text-lg md:text-xl leading-relaxed">Vérifiez le statut de vos paiements à tout moment.</p>
-                </div>
-
+                <span class="material-icons text-[#818dd8] text-[180px] sm:text-[250px] lg:text-[300px]">question_mark</span>
             </div>
-        </div>
-    </section>
-
-    <!-- About Us -->
-    <section id="view" class="bg-[#d9dddf30] py-32 md:py-48 shadow-lg">
-        <h2 class="font-outfit text-3xl sm:text-4xl font-semibold text-[#6c74b1] text-center mb-12 md:mb-16">About Us</h2>
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20">
-            <div class="max-w-3xl">
-                <p class="text-xl sm:text-2xl md:text-3xl leading-relaxed text-center lg:text-left">
-                    Nous sommes une plateforme de paiement en ligne dédiée à la simplicité et à la sécurité.<br><br>
-                    Notre objectif est de rendre vos opérations financières fluides et toujours accessibles - 24h/24 et 7j/7.<br><br>
-                    Nous nous efforçons d'offrir une expérience rapide, sécurisée et conviviale.
-                </p>
-            </div>
-            <span class="material-icons text-[#818dd8] text-[180px] sm:text-[250px] lg:text-[300px]">question_mark</span>
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="bg-white py-16 md:py-20 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16 text-center md:text-left">
-            <div>
-                <img src="public/img/esprit.png" alt="Logo Esprit" class="h-12 md:h-14 mx-auto md:mx-0 mb-4 md:mb-6" />
-                <p class="text-lg md:text-xl text-gray-700 max-w-xs mx-auto md:mx-0">
-                    Plateforme sécurisée pour la gestion de vos paiements universitaires.
-                </p>
-            </div>
-
-            <div>
-                <h3 class="font-outfit text-lg md:text-xl font-medium mb-4 md:mb-6">Navigation</h3>
-                <ul class="space-y-2 md:space-y-4 text-lg md:text-xl text-gray-700">
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Accueil</a></li>
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Paiements</a></li>
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Historique</a></li>
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Factures</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-outfit text-lg md:text-xl font-medium mb-4 md:mb-6">Support</h3>
-                <ul class="space-y-2 md:space-y-4 text-lg md:text-xl text-gray-700">
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Centre d'aide</a></li>
-                    <li><a href="#" class="hover:text-[#49abe1] transition">FAQ</a></li>
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Contact</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-outfit text-lg md:text-xl font-medium mb-4 md:mb-6">Légal</h3>
-                <ul class="space-y-2 md:space-y-4 text-lg md:text-xl text-gray-700">
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Conditions d'utilisation</a></li>
-                    <li><a href="#" class="hover:text-[#49abe1] transition">Politique de confidentialité</a></li>
-                </ul>
-            </div>
-        </div>
-        <p class="text-center text-lg md:text-xl text-gray-700">© 2025 Esprit. Tous droits réservés.</p>
-    </div>
-</footer>
-
+        </section>
+    </main>
+    <div include-html="/src/components/footer.html"></div>
+    <script src="/src/scripts/include.js"></script>
 </body>
 </html>
