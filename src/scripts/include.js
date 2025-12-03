@@ -8,10 +8,16 @@ function includeHTML() {
             .then(data => {
                 el.innerHTML = data;
 
-                // Initialize the mobile menu JS after navbar is loaded
                 if (file.includes('navbar.html')) {
+                    
                     const script = document.createElement('script');
-                    script.src = '../scripts/navbar.js';
+
+                    const isInsidePages = location.pathname.includes("/src/pages/");
+                    
+                    script.src = isInsidePages
+                        ? "../scripts/navbar.js"
+                        : "./src/scripts/navbar.js";
+
                     document.body.appendChild(script);
                 }
             })
