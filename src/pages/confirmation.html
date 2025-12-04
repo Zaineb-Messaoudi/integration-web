@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Paiement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .font-outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    
+    <!-- Header -->
+       <div include-html="../components/navbar.html"></div>
+
+
+    <!-- Main Content -->
+    <main class="bg-red-50 bg-opacity-70 py-12 sm:py-16 lg:py-20 px-4 min-h-[600px]">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Success Message -->
+            <div class="text-center mb-8 sm:mb-12">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+<span class="material-icons-outlined text-green-500">
+check_circle
+</span>
+                    <h1 class="text-2xl sm:text-3xl font-semibold font-outfit">Confirmation</h1>
+                </div>
+                <p class="text-lg sm:text-2xl px-4">
+                    Votre opération a été terminée avec succés
+                </p>
+            </div>
+
+            <!-- Status Card -->
+            <div class="bg-white rounded-lg p-6 sm:p-8 shadow-sm mb-8">
+                <h2 class="text-xl sm:text-2xl text-center mb-8 sm:mb-12">
+                    Status Administratif : Dossier Mise à Jour
+                </h2>
+
+                <!-- Info Boxes Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    
+                    <!-- Status Box -->
+                    <div class="bg-blue-50 bg-opacity-80 rounded-lg p-6">
+                        <div class="text-center">
+                            <div class="text-xl sm:text-2xl text-gray-800 mb-2">Status</div>
+                            <div class="text-xl sm:text-2xl text-gray-800">_______</div>
+                        </div>
+                    </div>
+
+                    <!-- Date Box -->
+                    <div class="bg-blue-50 bg-opacity-80 rounded-lg p-6">
+                        <div class="text-center">
+                            <div class="text-xl sm:text-2xl text-gray-800 mb-2">Date Màj</div>
+                            <div class="text-xl sm:text-2xl text-gray-800">__/__/____</div>
+                        </div>
+                    </div>
+
+                    <!-- Amount Box -->
+                    <div class="bg-blue-50 bg-opacity-80 rounded-lg p-6 sm:col-span-2 lg:col-span-1">
+                        <div class="text-center">
+                            <div class="text-xl sm:text-2xl text-gray-800 mb-2">Montant Payé</div>
+                            <div class="text-xl sm:text-2xl text-gray-800">_______ TND</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Return Button -->
+            <div class="flex justify-center">
+                <button class="bg-blue-400 hover:bg-blue-500 transition-colors text-black font-outfit text-lg sm:text-xl px-8 py-4 rounded-full shadow-md border border-black border-opacity-25 w-full sm:w-auto">
+                    Retour à l'acceuil
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+     <script src="../scripts/include.js"></script>
+    <div include-html="../components/footer.html"></div>
+
+</body>
+</html>
