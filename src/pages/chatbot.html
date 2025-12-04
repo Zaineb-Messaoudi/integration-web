@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Chatbot - Esprit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Roboto:wght@300;400;500&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'outfit': ['Outfit', 'sans-serif'],
+                        'roboto': ['Roboto', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        details summary {
+            list-style: none;
+            cursor: pointer;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+<div include-html="/src/components/navbar.html"></div>
+
+<!-- Main Content -->
+<main class="mt-12 lg:mt-[60px] px-4 lg:px-0 bg-[rgba(251,59,59,0.07)] min-h-[600px] lg:min-h-[700px] pb-8 lg:pb-8">
+    <div class="container mx-auto">
+        <h1 class="font-outfit font-semibold text-2xl md:text-3xl lg:text-[32px] text-[#49454f] text-center py-6 lg:py-8 leading-tight">
+            Qu'est ce que tu a besoin d'aide pour?
+        </h1>
+
+        <!-- Card Section -->
+        <section class="max-w-4xl mx-auto bg-white rounded-[25px] border border-[rgba(128,5,5,0.25)] shadow-[-2px_2px_10px_rgba(138,10,10,1)] p-4 md:p-6 lg:p-10">
+            <!-- Search Bar -->
+            <div class="mb-6 lg:mb-8">
+                <div class="relative bg-white rounded-full border border-[rgba(217,217,217,1)] shadow-[inset_0px_-2px_10px_rgba(0,0,0,0.25)] h-14 lg:h-[58px]">
+                    <label for="search-input" class="visually-hidden">Rechercher votre problème</label>
+                    <input
+                            type="text"
+                            id="search-input"
+                            class="w-full h-full px-4 pr-14 bg-transparent outline-none font-inter text-base text-[rgba(30,30,30,1)] placeholder-[rgba(30,30,30,0.6)]"
+                            placeholder="Rédiger Ton Problème"
+                            aria-label="Rédiger Ton Problème"
+                    />
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center" aria-label="Recherche vocale">
+                        <img src="img/mic.svg" alt="" class="w-8 h-8" />
+                    </button>
+                </div>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-4 lg:space-y-6">
+                <!-- FAQ 1 -->
+                <div>
+                    <details class="bg-[rgba(73,171,225,0.08)] rounded-[25px] overflow-hidden">
+                        <summary class="flex items-center justify-between h-14 lg:h-[58px] px-4 relative cursor-pointer">
+                            <span class="font-['SF_Pro'] font-medium text-lg lg:text-xl text-[rgba(0,0,0,0.85)]">FAQ1</span>
+                            <span class="text-2xl text-black" aria-hidden="true">􀆈</span>
+                        </summary>
+                    </details>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div>
+                    <details class="bg-[rgba(0,0,0,0.05)] rounded-[25px] overflow-hidden">
+                        <summary class="flex items-center justify-between h-14 lg:h-[58px] px-4 relative cursor-pointer">
+                            <span class="font-['SF_Pro'] font-medium text-lg lg:text-xl text-[rgba(0,0,0,0.85)]">FAQ2</span>
+                            <span class="font-['SF_Pro'] font-medium text-2xl text-black" aria-hidden="true">􀆈</span>
+                        </summary>
+                    </details>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div>
+                    <details class="bg-[rgba(73,171,225,0.08)] rounded-[25px] overflow-hidden">
+                        <summary class="flex items-center justify-between h-14 lg:h-[58px] px-4 relative cursor-pointer">
+                            <span class="font-['SF_Pro'] font-medium text-lg lg:text-xl text-[rgba(0,0,0,0.85)]">FAQ3</span>
+                            <span class="font-['SF_Pro'] font-medium text-2xl text-black" aria-hidden="true">􀆈</span>
+                        </summary>
+                    </details>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div>
+                    <details class="bg-[rgba(0,0,0,0.05)] rounded-[25px] overflow-hidden">
+                        <summary class="flex items-center justify-between h-14 lg:h-[58px] px-4 relative cursor-pointer">
+                            <span class="font-['SF_Pro'] font-medium text-lg lg:text-xl text-[rgba(0,0,0,0.85)]">FAQ4</span>
+                            <span class="font-['SF_Pro'] font-medium text-2xl text-black" aria-hidden="true">􀆈</span>
+                        </summary>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<div include-html="/src/components/footer.html"></div>
+<script src="/src/scripts/include.js"></script>
+</body>
+</html>

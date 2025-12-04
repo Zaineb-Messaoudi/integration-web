@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Étudiant - Tailwind v4</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e90ff',
+                        'primary-dark': '#1a78d4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+<!-- Navbar fixe -->
+<div include-html="../components/navbar.html"></div>
+
+<!-- Main content starts below navbar -->
+<div class="flex flex-1 flex-col lg:flex-row min-h-screen">
+    <!-- Sidebar gauche (fixe sur grand écran) -->
+    <aside class="lg:sticky lg:top-16 lg:w-72 w-full bg-gradient-to-b from-sky-400 to-primary text-white shadow-2xl z-40 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto">
+        <div class="p-6 lg:p-8 text-center">
+            <div class="w-20 h-20 lg:w-24 lg:h-24 mx-auto bg-white bg-opacity-20 rounded-full flex items-center justify-center text-4xl lg:text-5xl mb-3 lg:mb-4">
+                <i class="fas fa-user"></i>
+            </div>
+            <h2 class="text-xl lg:text-2xl font-bold">Akkeri Rayen</h2>
+            <p class="text-xs lg:text-sm opacity-90">ESP-2024-12345</p>
+            <span class="inline-block mt-3 lg:mt-4 px-3 lg:px-4 py-1.5 lg:py-2 bg-green-600 text-xs rounded-full">
+                    <i class="fas fa-check-circle mr-1"></i> Actif
+                </span>
+        </div>
+
+        <nav class="mt-6 lg:mt-8 px-4 lg:px-6 pb-6 lg:pb-8 space-y-2 flex flex-row lg:flex-col gap-2 lg:gap-0 overflow-x-auto lg:overflow-x-visible">
+            <a href="#" class="flex items-center py-3 lg:py-4 px-4 lg:px-5 rounded-lg bg-red-600 font-semibold whitespace-nowrap flex-shrink-0">
+                <i class="fas fa-user mr-2 lg:mr-4"></i> <span class="hidden sm:inline">Profil</span>
+            </a>
+            <a href="historique.html" class="flex items-center py-3 lg:py-4 px-4 lg:px-5 rounded-lg hover:bg-white hover:bg-opacity-20 transition whitespace-nowrap flex-shrink-0">
+                <i class="fas fa-history mr-2 lg:mr-4"></i> <span class="hidden sm:inline">Historique</span>
+            </a>
+            <a href="modifier.html" class="flex items-center py-3 lg:py-4 px-4 lg:px-5 rounded-lg hover:bg-white hover:bg-opacity-20 transition whitespace-nowrap flex-shrink-0">
+                <i class="fas fa-cog mr-2 lg:mr-4"></i> <span class="hidden sm:inline">Paramètres</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="flex-1 p-0 lg:p-10 bg-gray-50">
+
+        <!-- Barre de recherche stylée -->
+        <div class="relative mb-10">
+            <i class="fas fa-search absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 text-xl"></i>
+            <input type="text" placeholder="Rechercher une transaction, référence..."
+                   class="w-full pl-16 pr-6 py-5 bg-white rounded-full shadow-lg text-lg focus:outline-none focus:ring-4 focus:ring-primary/30 transition">
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8">
+
+            <!-- Tableau des transactions (gauche) -->
+            <div class="xl:col-span-8">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Historique des paiements</h2>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                <tr class="border-b-2 border-gray-200">
+                                    <th class="text-left py-4 font-semibold text-gray-600">Date</th>
+                                    <th class="text-left py-4 font-semibold text-gray-600">Montant</th>
+                                    <th class="text-left py-4 font-semibold text-gray-600">Référence</th>
+                                    <th class="text-left py-4 font-semibold text-gray-600">Type</th>
+                                    <th class="text-left py-4 font-semibold text-gray-600">Statut</th>
+                                </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="py-5">10/10/2024</td>
+                                    <td class="py-5 font-bold text-lg">5 500 DT</td>
+                                    <td class="py-5 text-gray-600">DTVR-2024-001234</td>
+                                    <td class="py-5 text-gray-500">Inscription</td>
+                                    <td class="py-5"><span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">Validée</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="py-5">15/10/2024</td>
+                                    <td class="py-5 font-bold text-lg">5 500 DT</td>
+                                    <td class="py-5 text-gray-600">DTVR-2024-001235</td>
+                                    <td class="py-5 text-gray-500">Inscription</td>
+                                    <td class="py-5"><span class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold">En attente</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="py-5">20/10/2024</td>
+                                    <td class="py-5 font-bold text-lg">3 200 DT</td>
+                                    <td class="py-5 text-gray-600">DTVR-2024-001456</td>
+                                    <td class="py-5 text-gray-500">Frais administratifs</td>
+                                    <td class="py-5"><span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">Validée</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="py-5">01/11/2024</td>
+                                    <td class="py-5 font-bold text-lg">5 500 DT</td>
+                                    <td class="py-5 text-gray-600">DTVR-2024-001789</td>
+                                    <td class="py-5 text-gray-500">Inscription</td>
+                                    <td class="py-5"><span class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold">En attente</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="py-5">15/11/2024</td>
+                                    <td class="py-5 font-bold text-lg">5 500 DT</td>
+                                    <td class="py-5 text-gray-600">DTVR-2024-002012</td>
+                                    <td class="py-5 text-gray-500">Inscription</td>
+                                    <td class="py-5"><span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">Validée</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Résumé à droite (se transforme en cartes empilées sur mobile) -->
+            <div class="xl:col-span-4 space-y-6">
+
+                <!-- Total payé -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 text-center shadow-lg">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Total payé</h3>
+                    <div class="text-4xl font-bold text-green-700">8 700 DT</div>
+                </div>
+
+                <!-- En attente -->
+                <div class="bg-gradient-to-br from-amber-50 to-yellow-100 rounded-2xl p-8 text-center shadow-lg">
+                    <h3 class="text-lg font-semibold text-amber-800 mb-2">Paiements en attente</h3>
+                    <div class="text-3xl font-bold text-amber-700">2 800 DT</div>
+                </div>
+
+                <!-- Prochaine validation -->
+                <div class="bg-gradient-to-br from-blue-50 to-primary/20 rounded-2xl p-8 text-center shadow-lg">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Prochaine validation</h3>
+                    <div class="text-2xl font-bold text-primary">- 2 jours</div>
+                </div>
+
+                <!-- Graphique tendance (simple SVG animé) -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <h4 class="text-lg font-semibold text-gray-700 mb-4">
+                        Évolution des paiements<br>
+                        <span class="text-sm text-gray-500">6 derniers mois</span>
+                    </h4>
+                    <svg viewBox="0 0 280 100" class="w-full h-28">
+                        <path d="M10,80 Q70,30 130,60 T250,40"
+                              stroke="#1e90ff" stroke-width="6" fill="none"
+                              stroke-linecap="round"
+                              class="animate-pulse"/>
+                        <path d="M10,80 Q70,30 130,60 T250,40"
+                              stroke="#1e90ff" stroke-width="6" fill="none"
+                              stroke-linecap="round"
+                              stroke-dasharray="300" stroke-dashoffset="300">
+                            <animate attributeName="stroke-dashoffset" from="300" to="0" dur="2s" fill="freeze"/>
+                        </path>
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Footer -->
+<div class="w-full bg-white mt-auto border-t" include-html="/src/components/footer.html"></div>
+<script src="/src/scripts/include.js"></script>
+</body>
+</html>

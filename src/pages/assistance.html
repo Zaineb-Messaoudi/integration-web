@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Assistance - Esprit Validation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'outfit': ['Outfit', 'Helvetica', 'sans-serif'],
+                        'roboto': ['Roboto', 'Helvetica', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        button:focus-visible {
+            outline: 2px solid #4a90e2 !important;
+        }
+    </style>
+</head>
+<body class="bg-white">
+<div class="min-h-screen flex flex-col">
+
+    <div include-html="/src/components/navbar.html"></div>
+
+    <main class="flex-1 mt-[0px] bg-[#fb3b3b12] px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-[105px]">
+        <div class="max-w-[1440px] mx-auto">
+            <!-- Problem Header -->
+            <section class="mb-12 md:mb-16 lg:mb-[109px]" aria-label="Question principale">
+                <div class="max-w-[380px] mx-auto bg-white rounded-[25px] border-3 border-[#fb3b3b] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-5">
+                    <div class="flex items-center justify-center gap-3">
+<span class="material-icons-outlined">
+attach_money
+</span>
+                        <h1 class="font-roboto font-medium text-lg md:text-2xl text-black text-center">
+                            Problème de Paiement ?
+                        </h1>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Assistance Cards Grid -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 max-w-[700px] mx-auto" aria-label="Options d'assistance">
+
+                <!-- Assistance Chatbot Card -->
+                <a href="chatbot.html" class="block">
+                    <article class="bg-[#e8f3f9] rounded-[25px] border-[2.26px] border-[#0069ff] shadow-[4px_4px_30px_rgba(0,0,0,0.25)] p-6 flex flex-col items-center gap-6 min-h-[200px] hover:shadow-[4px_4px_40px_rgba(0,0,0,0.35)] transition-shadow">
+                        <h2 class="font-outfit font-medium text-xl md:text-2xl text-black text-center leading-tight">
+                            Assistance<br />Chatbot
+                        </h2>
+                        <div class="w-12 h-12 flex items-center justify-center" role="img" aria-label="Icône de message">
+                <span class="material-icons-outlined">
+                    chat_bubble_outline
+                </span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Service Financier Card -->
+                <a href="agent.html" class="block">
+                    <article class="bg-[#e8f3f9] rounded-[25px] border-[2.75px] border-[#0069ff] shadow-[2px_2px_20px_rgba(0,0,0,0.25)] p-6 flex flex-col items-center justify-between min-h-[200px] hover:shadow-[2px_2px_30px_rgba(0,0,0,0.35)] transition-shadow">
+                        <h2 class="font-outfit font-medium text-xl md:text-2xl text-black text-center leading-8 mt-4">
+                            Service<br />Financier
+                        </h2>
+                        <div class="w-12 h-12 flex items-center justify-center" role="img" aria-label="Icône de message">
+                <span class="material-icons-outlined">
+                    chat_bubble_outline
+                </span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Problème du site Card -->
+                <a href="agent.html" class="block">
+                    <article class="bg-[#e8f3f9] rounded-[25px] border-[2.75px] border-[#0069ff] shadow-[2px_2px_20px_rgba(0,0,0,0.25)] p-6 flex flex-col items-center justify-between min-h-[200px] hover:shadow-[2px_2px_30px_rgba(0,0,0,0.35)] transition-shadow">
+                        <h2 class="font-outfit font-medium text-xl md:text-2xl text-black text-center leading-8 mt-4">
+                            Problème<br />du site
+                        </h2>
+                        <div class="w-12 h-12 flex items-center justify-center" role="img" aria-label="Icône de message">
+                <span class="material-icons-outlined">
+                    chat_bubble_outline
+                </span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Service Administratif Card -->
+                <a href="agent.html" class="block">
+                    <article class="bg-[#e8f3f9] rounded-[25px] border-[2.75px] border-[#0069ff] shadow-[2px_2px_20px_rgba(0,0,0,0.25)] p-6 flex flex-col items-center justify-between min-h-[200px] hover:shadow-[2px_2px_30px_rgba(0,0,0,0.35)] transition-shadow">
+                        <h2 class="font-outfit font-medium text-xl md:text-2xl text-black text-center leading-8 mt-4">
+                            Service<br />Administratif
+                        </h2>
+                        <div class="w-12 h-12 flex items-center justify-center" role="img" aria-label="Icône de message">
+                <span class="material-icons-outlined">
+                    chat_bubble_outline
+                </span>
+                        </div>
+                    </article>
+                </a>
+
+            </section>
+
+        </div>
+    </main>
+
+    <div include-html="/src/components/footer.html"></div>
+    <script src="/src/scripts/include.js"></script>
+</div>
+</body>
+</html>

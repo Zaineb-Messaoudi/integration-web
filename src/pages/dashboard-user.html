@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Dashboard User - Esprit Validation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'outfit': ['Outfit', 'Helvetica', 'sans-serif'],
+                        'roboto': ['Roboto', 'Helvetica', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+<div class="min-h-screen flex flex-col">
+    <div include-html="/src/components/navbar.html"></div>
+
+    <main class="mt-8 flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-12">
+        <section class="bg-[#49abe10d] rounded-3xl shadow-lg p-6 md:p-8 mb-8" aria-labelledby="payment-tracking-title">
+            <h2 id="payment-tracking-title" class="font-outfit font-medium text-2xl mb-6 text-left">Suivi de Paiement</h2>
+
+            <div class="w-full max-w-3xl mx-auto mb-8 flex flex-col items-center justify-center">
+                <div class="h-6 w-full rounded-full overflow-hidden mb-6" style="background: linear-gradient(90deg, #fb3b3b 50%, #ede6e6 50%);" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Progression du paiement: 50%"></div>
+                <p class="text-center font-outfit font-medium text-2xl">
+                    <span class="text-[#fb3b3b]">50%</span> <span class="text-black">Payé</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                <article class="bg-[#edf4f8] border border-[#4c62c4] rounded-3xl p-5 shadow-sm">
+                    <div class="flex flex-col justify-center h-full">
+                        <h3 class="font-outfit font-medium text-base text-center text-[#1d1b20] mb-2">Type de Paiement</h3>
+                        <p class="font-roboto text-sm text-center text-[#1d1b20]">Versement bancaire</p>
+                    </div>
+                </article>
+
+                <article class="bg-[#edf4f8] border border-[#4c62c4] rounded-3xl p-5 shadow-sm">
+                    <div class="flex flex-col justify-center h-full">
+                        <h3 class="font-outfit font-medium text-base text-center text-[#1d1b20] mb-2">Frais Payé</h3>
+                        <p class="font-roboto text-sm text-center text-[#1d1b20]">4275 TND</p>
+                    </div>
+                </article>
+
+                <article class="bg-[#edf4f8] border border-[#4c62c4] rounded-3xl p-5 shadow-sm">
+                    <div class="flex flex-col justify-center h-full">
+                        <h3 class="font-outfit font-medium text-base text-center text-[#1d1b20] mb-2">Frais Total</h3>
+                        <p class="font-roboto text-sm text-center text-[#1d1b20]">8 550 TND</p>
+                    </div>
+                </article>
+
+                <article class="bg-[#edf4f8] border border-[#4c62c4] rounded-3xl p-5 shadow-sm">
+                    <div class="flex flex-col justify-center h-full">
+                        <h3 class="font-outfit font-medium text-base text-center text-[#1d1b20] mb-2">Tranche</h3>
+                        <p class="font-roboto text-sm text-center text-[#1d1b20]">1</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <section class="bg-white rounded-3xl shadow-lg w-full max-w-[395px] mx-auto aspect-[390/395] p-6">
+                <article class="border border-[#fb3b3b] rounded-3xl p-4 mb-6">
+                    <p id="calendar-title" class="font-outfit font-semibold text-lg text-center text-[#1d1b20]">
+                        Date d'écheance : 17 / 01 / 2025
+                    </p>
+                </article>
+
+                <div class="calendar-widget flex flex-col h-full">
+                    <header class="flex justify-between items-center mb-4 px-2">
+                        <h3 class="font-outfit font-extrabold text-2xl">January 2026</h3>
+
+                        <div class="flex space-x-2">
+                            <button type="button" aria-label="Mois précédent" class="p-2 hover:bg-gray-100 rounded">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+
+                            <button type="button" aria-label="Mois suivant" class="p-2 hover:bg-gray-100 rounded text-gray-400">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </header>
+
+                    <div class="grid grid-cols-7 gap-0 mb-1 text-xs md:text-sm">
+                        <div class="text-center font-outfit font-semibold">Mo</div>
+                        <div class="text-center font-outfit font-semibold">Tu</div>
+                        <div class="text-center font-outfit font-semibold">We</div>
+                        <div class="text-center font-outfit font-semibold">Th</div>
+                        <div class="text-center font-outfit font-semibold">Fr</div>
+                        <div class="text-center font-outfit font-semibold">Sa</div>
+                        <div class="text-center font-outfit font-semibold">Su</div>
+                    </div>
+
+                    <div class="grid grid-cols-7 gap-0 flex-1">
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">1</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">2</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">3</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">4</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">5</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">6</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">7</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">8</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">9</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">10</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">11</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">12</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">13</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">14</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">15</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">16</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">17</div>
+                        <div class="bg-[#fb3b3b] border border-gray-300 aspect-square flex items-center justify-center font-outfit font-semibold text-xs md:text-sm text-white" aria-label="18 janvier 2026 - Date d'échéance">18</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">19</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">20</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">21</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">22</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">23</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">24</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">25</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">26</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">27</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">28</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">29</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">30</div>
+                        <div class="border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm">31</div>
+                        <div class="bg-[#f2f3f7] border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm text-gray-400">1</div>
+                        <div class="bg-[#f2f3f7] border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm text-gray-400">2</div>
+                        <div class="bg-[#f2f3f7] border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm text-gray-400">3</div>
+                        <div class="bg-[#f2f3f7] border border-gray-300 aspect-square flex items-center justify-center font-outfit text-xs md:text-sm text-gray-400">4</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="bg-white border border-[#49abe18c] rounded-3xl shadow-lg p-6" aria-labelledby="school-engagement-title">
+                <h2 id="school-engagement-title" class="font-outfit font-medium text-2xl text-center mb-8">Engagement Scolaire Complet</h2>
+
+                <div class="space-y-6">
+                    <article class="bg-[#49abe114] border border-[#4c62c4] rounded-3xl p-4 max-w-[250px] mx-auto">
+                        <h3 class="font-outfit font-medium text-base text-center text-[#1d1b20] mb-2">Nombres des<br/>années</h3>
+                        <p class="font-roboto text-sm text-center text-[#1d1b20]">3 années</p>
+                    </article>
+
+                    <article class="bg-[#49abe114] border border-[#4c62c4] rounded-3xl p-4 max-w-[250px] mx-auto">
+                        <h3 class="font-outfit font-medium text-base text-center text-[#1d1b20] mb-2">Frais Scolaire<br/>Total</h3>
+                        <p class="font-roboto text-sm text-center text-[#1d1b20]">25 650 TND</p>
+                    </article>
+
+                    <article class="bg-[#49abe114] border border-[#4c62c4] rounded-3xl p-4 max-w-[250px] mx-auto">
+                        <h3 class="font-outfit font-medium text-base text-center text-[#1d1b20] mb-2">Frais Scolaire<br/>Restant</h3>
+                        <p class="font-roboto text-sm text-center text-[#1d1b20]">14 250 TND</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div include-html="/src/components/footer.html"></div>
+    <script src="/src/scripts/include.js"></script>
+</div>
+</body>
+</html>

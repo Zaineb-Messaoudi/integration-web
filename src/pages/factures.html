@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Factures - Esprit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        roboto: ['Roboto', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0B22B8',
+                        'primary-light': '#0B22B81A',
+                        'red-light': '#FB3B3B1A',
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .icon-btn img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-roboto antialiased">
+
+<div include-html="/src/components/navbar.html"></div>
+
+<main class="pt-15 pb-50 max-w-7xl mx-auto px-6 lg:px-8">
+    <section class="mt-12 flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+        <button class="flex items-center justify-center gap-3 px-6 py-4 bg-primary-light rounded-full shadow-xl hover:shadow-2xl transition">
+            <span class="material-icons-outlined"> filter_alt </span>
+            <span class="text-sm font-outfit font-medium text-gray-700">Filtrer</span>
+        </button>
+
+        <button class="flex items-center justify-center gap-3 px-6 py-4 bg-primary-light rounded-full shadow-xl hover:shadow-2xl transition">
+            <span class="material-icons-outlined">file_download</span>
+            <span class="text-sm font-outfit font-medium text-gray-700">Télécharger Tout</span>
+        </button>
+
+        <button class="flex items-center justify-center gap-3 px-6 py-4 bg-primary-light rounded-full shadow-xl hover:shadow-2xl transition">
+            <span class="material-icons-outlined">print</span>
+            <span class="text-sm font-outfit font-medium text-gray-700">Imprimer Tout</span>
+        </button>
+    </section>
+
+    <section class="mt-16 bg-red-light border border-black/50 rounded-3xl shadow-2xl overflow-hidden">
+        <div class="p-4 lg:p-8 space-y-4">
+            <article class="bg-white border border-black/50 rounded-3xl flex items-center justify-between px-8 py-4 shadow-md">
+                <h2 class="text-2xl font-roboto font-medium">Facture N° : CLTVR240831</h2>
+                <div class="flex gap-4">
+                    <button aria-label="Voir détails" class="icon-btn">
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </button>
+                    <a href="details.html"  aria-label="Télécharger" class="icon-btn">
+                        <span class="material-icons-outlined">file_download</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-white border border-black/50 rounded-3xl flex items-center justify-between px-8 py-4 shadow-md">
+                <h2 class="text-2xl font-roboto font-medium">Facture N° : CLTVR250110</h2>
+                <div class="flex gap-4">
+                   <a href="details.html" aria-label="Voir détails" class="icon-btn">
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </a>
+                    <button aria-label="Télécharger" class="icon-btn">
+                        <span class="material-icons-outlined">file_download</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="bg-white border border-black/50 rounded-3xl flex items-center justify-between px-8 py-4 shadow-md">
+                <h2 class="text-2xl font-roboto font-medium">Facture N° : CLTVR250320</h2>
+                <div class="flex gap-4">
+                   <a href="details.html" aria-label="Voir détails" class="icon-btn">
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </a>
+                    <button aria-label="Télécharger" class="icon-btn">
+                        <span class="material-icons-outlined">file_download</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="bg-white border border-black/50 rounded-3xl flex items-center justify-between px-8 py-4 shadow-md">
+                <h2 class="text-2xl font-roboto font-medium">Facture N° : CLTVR250601</h2>
+                <div class="flex gap-4">
+                   <a href="details.html" aria-label="Voir détails" class="icon-btn">
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </a>
+                    <button aria-label="Télécharger" class="icon-btn">
+                        <span class="material-icons-outlined">file_download</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="bg-white border border-black/50 rounded-3xl flex items-center justify-between px-8 py-4 shadow-md">
+                <h2 class="text-2xl font-roboto font-medium">Facture N° : CLTVR250901</h2>
+                <div class="flex gap-4">
+                   <a href="details.html" aria-label="Voir détails" class="icon-btn">
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </a>
+                    <button aria-label="Télécharger" class="icon-btn">
+                        <span class="material-icons-outlined">file_download</span>
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<div include-html="/src/components/footer.html"></div>
+<script src="/src/scripts/include.js"></script>
+
+</body>
+</html>

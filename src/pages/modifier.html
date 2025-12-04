@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Étudiant - Tailwind v4</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e90ff',
+                        'primary-dark': '#1a78d4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+<!-- Navbar fixe -->
+<div include-html="../components/navbar.html"></div>
+
+<!-- Main content starts below navbar -->
+<div class="flex flex-1 flex-col lg:flex-row min-h-screen">
+
+    <!-- Sidebar gauche (fixe sur grand écran) -->
+    <aside class="lg:sticky lg:top-16 lg:w-72 w-full bg-gradient-to-b from-sky-400 to-primary text-white shadow-2xl z-40 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto">
+        <div class="p-6 lg:p-8 text-center">
+            <div class="w-20 h-20 lg:w-24 lg:h-24 mx-auto bg-white bg-opacity-20 rounded-full flex items-center justify-center text-4xl lg:text-5xl mb-3 lg:mb-4">
+                <i class="fas fa-user"></i>
+            </div>
+            <h2 class="text-xl lg:text-2xl font-bold">Akkeri Rayen</h2>
+            <p class="text-xs lg:text-sm opacity-90">ESP-2024-12345</p>
+            <span class="inline-block mt-3 lg:mt-4 px-3 lg:px-4 py-1.5 lg:py-2 bg-green-600 text-xs rounded-full">
+                <i class="fas fa-check-circle mr-1"></i> Actif
+            </span>
+        </div>
+
+        <nav class="mt-6 lg:mt-8 px-4 lg:px-6 pb-6 lg:pb-8 space-y-2 flex flex-row lg:flex-col gap-2 lg:gap-0 overflow-x-auto lg:overflow-x-visible">
+            <a href="#" class="flex items-center py-3 lg:py-4 px-4 lg:px-5 rounded-lg bg-red-600 font-semibold whitespace-nowrap flex-shrink-0">
+                <i class="fas fa-user mr-2 lg:mr-4"></i> <span class="hidden sm:inline">Profil</span>
+            </a>
+            <a href="historique.html" class="flex items-center py-3 lg:py-4 px-4 lg:px-5 rounded-lg hover:bg-white hover:bg-opacity-20 transition whitespace-nowrap flex-shrink-0">
+                <i class="fas fa-history mr-2 lg:mr-4"></i> <span class="hidden sm:inline">Historique</span>
+            </a>
+            <a href="modifier.html" class="flex items-center py-3 lg:py-4 px-4 lg:px-5 rounded-lg hover:bg-white hover:bg-opacity-20 transition whitespace-nowrap flex-shrink-0">
+                <i class="fas fa-cog mr-2 lg:mr-4"></i> <span class="hidden sm:inline">Paramètres</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="flex-1 p-4 lg:p-10 bg-gray-50 flex flex-col">
+        <!-- Remove max-w-3xl so content fills available width -->
+        <div class="flex-1 flex flex-col">
+
+            <!-- Card -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex-1 flex flex-col">
+
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-sky-500 to-primary text-white p-6 sm:p-8 relative">
+                    <div class="absolute top-4 sm:top-6 right-4 sm:right-6 flex gap-2 sm:gap-3 flex-wrap">
+                        <button class="px-4 py-2 sm:px-5 sm:py-2 bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white text-sm font-medium rounded-full transition">
+                            Mettre à jour
+                        </button>
+                        <button class="px-4 py-2 sm:px-5 sm:py-2 bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white text-sm font-medium rounded-full transition">
+                            Supprimer
+                        </button>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-center">Modifier le profil</h1>
+                </div>
+
+                <!-- Form -->
+                <div class="p-4 sm:p-8 -mt-6 flex-1 flex flex-col">
+                    <div class="bg-white rounded-2xl shadow-lg p-4 sm:p-8 space-y-6 sm:space-y-8 flex-1 flex flex-col">
+
+                        <!-- Form Fields -->
+                        <div class="flex-1 overflow-y-auto space-y-6 sm:space-y-8">
+
+                            <!-- Nom complet -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Nom complet</label>
+                                <input type="text" value="Rayen Akkeri"
+                                       class="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            </div>
+
+                            <!-- Message de bienvenue -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Message de bienvenue</label>
+                                <textarea rows="4" placeholder="Ex: Bienvenue sur mon profil !"
+                                          class="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none transition"></textarea>
+                            </div>
+
+                            <!-- Langue -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Langue</label>
+                                <select class="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option>Français</option>
+                                    <option>English</option>
+                                    <option>العربية</option>
+                                </select>
+                            </div>
+
+                            <!-- Ligne : Format date + heure -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Format de date</label>
+                                    <select class="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                        <option>JJ/MM/AAAA</option>
+                                        <option>MM/DD/YYYY</option>
+                                        <option>AAAA-MM-JJ</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Format horaire</label>
+                                    <select class="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                        <option>24h</option>
+                                        <option>12h (am/pm)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Pays -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Pays / Région</label>
+                                <select class="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option>Tunisie</option>
+                                    <option>France</option>
+                                    <option>Maroc</option>
+                                    <option>Algérie</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row sm:justify-between gap-4 pt-6 sm:pt-8 border-t border-gray-200">
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button class="px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full transition transform hover:scale-105">
+                                    Enregistrer les modifications
+                                </button>
+                                <button class="px-6 sm:px-8 py-3 sm:py-4 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-full transition">
+                                    Annuler
+                                </button>
+                            </div>
+                            <button class="px-6 sm:px-8 py-3 sm:py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full transition transform hover:scale-105">
+                                Supprimer le compte
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Footer -->
+<div class="w-full bg-white mt-auto border-t" include-html="/src/components/footer.html"></div>
+<script src="/src/scripts/include.js"></script>
+</body>
+</html>

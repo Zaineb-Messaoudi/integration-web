@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Détails du Paiement - Esprit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        roboto: ['Roboto', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0B22B8',
+                        'primary-light': '#0B22B81A',
+                        'red-light': '#FB3B3B1A',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        button:focus-visible { outline: 2px solid #4a90e2 !important; }
+    </style>
+</head>
+<body class="bg-white font-roboto antialiased">
+<div class="w-full">
+    <div include-html="/src/components/navbar.html"></div>
+
+    <main class="pt-16 md:pt-28 pb-20 px-4 sm:px-6 lg:px-8 bg-red-light min-h-screen">
+        <div class="max-w-7xl mx-auto">
+
+            <h1 class="text-center font-outfit font-medium text-xl md:text-2xl mb-8">
+                Paiement N°........................
+            </h1>
+
+            <!-- Wrapper with relative positioning for absolute buttons on desktop -->
+            <div class="relative flex justify-center">
+                <div class="w-full max-w-lg md:max-w-2xl lg:max-w-3xl"> <!-- This controls card width -->
+
+                    <!-- White card - narrower and responsive -->
+                    <section class="bg-white rounded-3xl shadow-xl border border-gray-300 border-opacity-30 p-6 md:p-8"
+                             aria-label="Détails du paiement">
+                        <div class="space-y-4 md:space-y-5">
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">Date Paiement :</span>
+                                <span class="ml-3 text-gray-600">15/03/2025</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">Année Universitaire :</span>
+                                <span class="ml-3 text-gray-600">2024-2025</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">Tranche :</span>
+                                <span class="ml-3 text-gray-600">2ème tranche</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">ID_Paiement :</span>
+                                <span class="ml-3 text-gray-600">PAY20250315001</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">ID_Etudiant :</span>
+                                <span class="ml-3 text-gray-600">ETU20210045</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">Nom Du Payeur :</span>
+                                <span class="ml-3 text-gray-600">Mohamed Ben Ali</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">Type Paiement :</span>
+                                <span class="ml-3 text-gray-600">Espèces</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg text-lg font-medium">
+                                <span class="text-gray-800">Montant Payé :</span>
+                                <span class="ml-3 text-primary">2 800 000 TND</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">Trésorièr(e) de :</span>
+                                <span class="ml-3 text-gray-600">Mme. Salma Trabelsi</span>
+                            </div>
+                            <div class="border border-gray-200 bg-gray-50 p-4 rounded-lg">
+                                <span class="font-medium text-gray-800">Banque :</span>
+                                <span class="ml-3 text-gray-600">—</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Desktop Buttons - closer to card -->
+                <div class="hidden lg:flex flex-col gap-4 absolute top-4 right-0">
+                    <button class="bg-blue-100 border-2 border-blue-600 shadow-md w-32 h-20 flex flex-col items-center justify-center rounded-xl hover:bg-blue-200 transition whitespace-nowrap"
+                            aria-label="Imprimer">
+                        <svg class="w-8 h-8 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                        </svg>
+                        <span class="font-medium text-gray-800">Imprimer</span>
+                    </button>
+                    <button class="bg-blue-100 border-2 border-blue-600 shadow-md w-32 h-20 flex flex-col items-center justify-center rounded-xl hover:bg-blue-200 transition whitespace-nowrap"
+                            aria-label="Télécharger">
+                        <svg class="w-8 h-8 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <span class="font-medium text-gray-800">Télécharger</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Buttons -->
+            <div class="lg:hidden flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+                <button class="bg-blue-100 border-2 border-blue-600 shadow-md px-8 py-4 flex items-center gap-3 rounded-xl hover:bg-blue-200 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                    </svg>
+                    <span class="font-medium text-gray-800">Imprimer</span>
+                </button>
+                <button class="bg-blue-100 border-2 border-blue-600 shadow-md px-8 py-4 flex items-center gap-3 rounded-xl hover:bg-blue-200 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span class="font-medium text-gray-800">Télécharger</span>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <div include-html="/src/components/footer.html"></div>
+    <script src="/src/scripts/include.js"></script>
+</div>
+</body>
+</html>
